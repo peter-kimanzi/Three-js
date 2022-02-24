@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    
+}
+
+
+.body{
+    background-color: white;
+
+}
+
+canvas{
+    display: block;
+}
+
+/* cursor */
+
+.cursor{
+    color: black;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    z-index: 700;
+    position: absolute;
+    border-radius:50% ;
+    transition-duration:200ms ;
+    transition-timing-function:ease-out ;
+    animation: cursorAnim .5s infinite alternate;
+}
+.cursor::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 20px solid white;
+    border-radius: 50%;
+    /* opacity: .5; */
+    top:-5px;
+    left:-6px;
+    animation: cursorAnim2 .5s infinite alternate;
+
+}
+
+/* header */
+
+.header{
+    /* background-color: black; */
+    width: 100%;
+    display: block;
+    height: 80px;
+    position: absolute;
+    background-color: #000;
+    color: white;
+}
+
+.inner-header{
+    display: block;
+    width: 90%;
+    /* background-color: red; */
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    background-color: transparent;
+}
+
+
+.logo-container{
+    height: 100%;
+    float: left;
+    display: table;
+    left: -40px;
+}
+
+.logo-container h1{
+    display: table-cell;
+    vertical-align: middle;
+    color: var(--primary-color) ;
+    position: absolute;
+    background-color: transparent;
+
+}
+
+.logo-container span{
+    position: absolute;
+    background-color: transparent;
+}
+
+.nav{
+    float: right;
+    height: 100%;
+    
+    display: block;
+    background-color: transparent;
+}
+
+.nav li{
+    height: 100%;
+    float: left;
+    padding: 0 20px;
+    font-family: sans-serif;
+    font-size: 20px;
+    display: table;
+    background-color: transparent;
+
+    
+
+}
+
+.nav li a{
+    color: var(--primary-color) ;
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: 600;
+    background-color: transparent;
+}        
+
+
+
+/* title */
+
+.title{
+    color: white;
+    position: relative;
+   
+}
+
+.title h1{
+    background-color: transparent;
+     text-decoration: none;
+     position: absolute;
+     top: 40vh;
+     left: 300px;
+     font-size: 5rem;
+     font-weight: 900;
+     text-transform: uppercase;
+     
+}
+
+.title p{
+    background-color: transparent;
+    /* text-decoration: underline; */
+    position: absolute;
+    top: 52vh;
+    left: 300px;
+    /* font-size: 5rem; */
+    /* font-weight: 900; */
+    /* text-transform: uppercase; */
+    
+}
+
+
+@keyframes cursorAnim{
+    from{
+    transform: scale(0.5);
+    }
+    to{
+        transform: scale(.5);
+        }
+    }
+
+    @keyframes cursorAnim2{
+        from{
+        transform: scale(1);
+        }
+        to{
+            transform: scale(1.5 );
+            }
+        }     
